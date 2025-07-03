@@ -11,3 +11,13 @@ Turns: A single round of interaction between the user and the model.
 
 Components: Clients, model endpoints, routers/orchestrators.
 
+## Minimal Setup
+
+Start with a basic setup:
+
+A user input (a question).
+
+A context object (some metadata or session state).
+
+A model endpoint that can receive and respond to MCP-style input.
+
