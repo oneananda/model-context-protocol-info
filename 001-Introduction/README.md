@@ -83,5 +83,21 @@ Roles typically include:
 
 **A turn can include one or more messages (e.g., user input and assistant response).**
 
+**Context**
 
+Definition: Context is structured metadata attached to a turn that helps the model understand the situation.
+
+Context may include:
+
+Session ID – to track continuity across turns
+
+Timestamp – to order and time-stamp interactions
+
+User Preferences – like language, units (e.g., Celsius), tone
+
+Previous Interactions – past messages, history summaries
+
+Environment Variables – location, app state, permissions
+
+**Think of context as the envelope the message comes in, giving background info.**
 
