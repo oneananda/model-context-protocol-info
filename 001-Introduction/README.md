@@ -101,3 +101,47 @@ Environment Variables – location, app state, permissions
 
 **Think of context as the envelope the message comes in, giving background info.**
 
+**Turn Response**
+
+Definition: This is the model’s reply to a turn
+
+The response can also include updated context, like model-inferred user intent or modified preferences.
+
+**Session**
+
+Definition: A session refers to the ongoing conversation or interaction between the user and the model, possibly over multiple turns.
+
+Identified by session_id
+
+Enables memory, personalization, and state tracking
+
+**Instruction (System Prompt)**
+
+In some setups, an additional system-level instruction can guide the model's behavior.
+
+**This can appear in the messages list or separately in context**.
+
+---
+
+### ✅ **Summary Table**
+
+| Concept         | Type     | Purpose                                                                                |
+| --------------- | -------- | -------------------------------------------------------------------------------------- |
+| `turn`          | Request  | A single cycle of user input (possibly with context)                                   |
+| `message`       | Object   | A unit of communication (can be from user, assistant, or system)                       |
+| `context`       | Object   | Metadata that informs the model's behavior (e.g., session info, preferences)           |
+| `turn_response` | Response | The model’s reply to a `turn`, often includes updated context                          |
+| `session`       | ID       | Identifies and groups multiple turns within a single interaction (used for continuity) |
+| `instruction`   | Message  | A system-level behavior directive (optional)                                           |
+
+---
+
+### 🔁 **Turn Lifecycle Flow**
+
+1. **User** sends input to the **client**.
+2. The **client** creates a `turn`, including the user's message and any **context**.
+3. The `turn` is sent to the **model**.
+4. The **model** processes the `turn` and generates a `turn_response` (with or without updated context).
+5. The **client** receives the `turn_response` and displays the assistant's reply to the **user**.
+
+---
