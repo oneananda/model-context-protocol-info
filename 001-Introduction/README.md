@@ -1,4 +1,4 @@
-# Core Concepts of MCP
+﻿# Core Concepts of MCP
 
 MCP is a protocol that defines how contextual information (like user intent, preferences, session history, etc.) is exchanged between components of an AI system, especially between models and clients or orchestration layers.
 
@@ -49,5 +49,39 @@ mcp_turn = {
     }
 }
 ````
+
+| Field      | Type   | Description                                                                                           |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| `type`     | string | Indicates the kind of payload. `"turn"` means it's a user turn in a dialogue.                         |
+| `user_id`  | string | Unique identifier for the user sending the message. Used for tracking sessions and personalization.   |
+| `messages` | list   | A list of message objects. Each message has a `role` (e.g., `"user"` or `"assistant"`) and `content`. |
+| `context`  | object | Structured metadata that provides context like session ID, timestamps, preferences, etc.              |
+
+**Turn**
+
+Definition: A turn is a single interaction cycle between a user and the system (typically a language model).
+
+It may contain just a user message (input only), or both user message and model reply.
+
+MCP uses turns to structure communication incrementally, just like conversational turns in real life.
+
+**Think of it as: "A user says something → the model may respond → that’s a turn."**
+
+**Message**
+
+Definition: A message is an individual communication element within a turn.
+
+Each message has a role and content.
+
+Roles typically include:
+
+"user" – messages from the human
+
+"assistant" – model-generated replies
+
+(optionally) "system" – special instructions or context (e.g., constraints or goals)
+
+**A turn can include one or more messages (e.g., user input and assistant response).**
+
 
 
