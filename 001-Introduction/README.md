@@ -145,3 +145,16 @@ In some setups, an additional system-level instruction can guide the model's beh
 5. The **client** receives the `turn_response` and displays the assistant's reply to the **user**.
 
 ---
+
+### 🔄 **MCP Lifecycle Flow**
+
+* The **User** interacts with the **Client**, sending a message.
+* The **Client** creates a **Turn Object**, which includes the user's message and any relevant **context** (e.g., session or preferences).
+* The **Turn Object** is sent to the **Model** for processing.
+* The **Model** processes the message and generates a **Turn Response** (model output), possibly with updated context.
+* The **Turn Response** is sent back to the **Client**.
+* The **Client** displays the assistant's reply to the **User**.
+* A **Logger** or **monitoring tool** might capture the interaction for tracking purposes.
+
+---
+
