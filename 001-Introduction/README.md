@@ -191,3 +191,10 @@ turn_response = {
 4. Session Management Example
 •	Show how to maintain session continuity across multiple turns.
 •	Demonstrate how the session_id and context are reused and updated.
+
+5. Expand on Extensibility
+•	Briefly explain how to add custom fields or support new message types.
+•	Suggest how to handle additional context (e.g., user preferences, environment).
+
+6. Add Sequence Diagrams or Flowcharts
+•	Visualize the MCP lifecycle and turn flow for clarity.
