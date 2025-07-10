@@ -164,14 +164,30 @@ In some setups, an additional system-level instruction can guide the model's beh
 •	Sends it to a stub model endpoint (could be a local Flask server or just a function).
 •	Receives and prints/logs the response.
 
-2. Context Lifecycle
-Describe how context is created, updated, and passed between components throughout a session. Consider including:
-•	How context is initialized at session start.
-•	How it evolves with each turn.
-•	Strategies for context pruning or summarization.
+2. Add a Turn Response Example
+•	Show what a typical turn_response looks like, including updated context or model output.
+•	Example:
 
 
-3. Error Handling
-Explain how errors are communicated in MCP, such as:
-•	Standard error message format.
-•	Common error codes (e.g., invalid input, context too large).
+```` 
+turn_response = {
+    "messages": [
+        {
+            "role": "assistant",
+            "content": "The capital of France is Paris."
+        }
+    ],
+    "context": {
+        "session_id": "session-456",
+          "timestamp": "2025-07-03T12:00:01Z"
+      }
+  }
+````
+
+3. Document Error Handling
+•	Describe how errors are represented in MCP (e.g., error codes, messages in the response).
+•	Provide an example error response.
+
+4. Session Management Example
+•	Show how to maintain session continuity across multiple turns.
+•	Demonstrate how the session_id and context are reused and updated.
