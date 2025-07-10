@@ -158,3 +158,9 @@ In some setups, an additional system-level instruction can guide the model's beh
 
 ---
 
+1. Implement a Minimal MCP Client and Stub Model
+•	Write a simple Python script that:
+•	Constructs an MCP turn (as shown in your example).
+•	Sends it to a stub model endpoint (could be a local Flask server or just a function).
+•	Receives and prints/logs the response.
+
