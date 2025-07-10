@@ -164,3 +164,14 @@ In some setups, an additional system-level instruction can guide the model's beh
 •	Sends it to a stub model endpoint (could be a local Flask server or just a function).
 •	Receives and prints/logs the response.
 
+2. Context Lifecycle
+Describe how context is created, updated, and passed between components throughout a session. Consider including:
+•	How context is initialized at session start.
+•	How it evolves with each turn.
+•	Strategies for context pruning or summarization.
+
+
+3. Error Handling
+Explain how errors are communicated in MCP, such as:
+•	Standard error message format.
+•	Common error codes (e.g., invalid input, context too large).
