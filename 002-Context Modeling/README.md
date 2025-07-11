@@ -30,3 +30,12 @@ instruction: guiding behavior
 
 **Why? It keeps context interpretable and extensible — easy for both machines and humans to work with.**
 
+### Temporal and Session Awareness
+
+Context includes timestamps and session_ids to:
+
+Reconstruct conversations
+
+Order events
+
+Persist or recall information across multiple turns
