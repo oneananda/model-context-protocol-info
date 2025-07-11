@@ -14,3 +14,19 @@ Without context, a model is stateless and can't personalize or remember anything
 
 **Analogy: It's like the "backpack" of knowledge the model carries each time it speaks.**
 
+### Structured, Namespaced Design
+
+Context should follow a structured schema with logical groups like:
+
+user: identity, preferences
+
+session: ID, timestamps
+
+memory: history or summary
+
+environment: location, device, timezone
+
+instruction: guiding behavior
+
+**Why? It keeps context interpretable and extensible — easy for both machines and humans to work with.**
+
