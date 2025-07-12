@@ -39,3 +39,17 @@ Reconstruct conversations
 Order events
 
 Persist or recall information across multiple turns
+
+### User Modeling and Personalization
+
+User preferences can be embedded to shape model behavior:
+
+````
+"preferences": {
+  "language": "fr",
+  "tone": "formal",
+  "diet": "vegan"
+}
+````
+
+**These are used to steer tone, language, or decisions in responses.**
