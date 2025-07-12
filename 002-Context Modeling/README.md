@@ -53,3 +53,14 @@ User preferences can be embedded to shape model behavior:
 ````
 
 **These are used to steer tone, language, or decisions in responses.**
+
+### Summarized Memory
+
+Instead of full transcripts, use compressed memory summaries in context:
+
+````json
+"memory": {
+  "summary": "User asked about eco-tourism in Spain.",
+  "last_intent": "find travel packages"
+}
+````
