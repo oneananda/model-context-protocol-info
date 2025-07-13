@@ -64,3 +64,11 @@ Instead of full transcripts, use compressed memory summaries in context:
   "last_intent": "find travel packages"
 }
 ````
+
+### System Instructions and Goals
+
+The system_instruction field defines how the assistant should behave:
+
+"system_instruction": "You are a helpful tech support agent. Keep answers short."
+
+This enables dynamic persona, role, or task switching.
