@@ -72,3 +72,13 @@ The system_instruction field defines how the assistant should behave:
 "system_instruction": "You are a helpful tech support agent. Keep answers short."
 
 This enables dynamic persona, role, or task switching.
+
+### Context Evolution (Versioning & Updates)
+
+Contexts should support:
+
+Versioning (to track schema evolution)
+
+Delta updates (not resending full state every time)
+
+Context merging (server + client contributing parts)
