@@ -82,3 +82,20 @@ Versioning (to track schema evolution)
 Delta updates (not resending full state every time)
 
 Context merging (server + client contributing parts)
+
+---
+
+### **Example: Predicting the Next Word in a Sentence**
+
+**Task**: Predict the next word in the sentence using context.
+
+#### **Input Sentence**:
+
+"The cat sat on the"
+
+#### **Context Modeling Output**:
+
+The model considers the context of the words "The cat sat on the" to predict the next word.
+A likely prediction: **"mat"**
+
+---
