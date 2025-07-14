@@ -99,3 +99,10 @@ The model considers the context of the words "The cat sat on the" to predict the
 A likely prediction: **"mat"**
 
 ---
+
+### **How Context Modeling Works Here**:
+
+* **Word Embeddings** or **Recurrent Neural Networks (RNNs)** or **Transformers** are used to understand the relationship between words.
+* The context "The cat sat on the" provides clues that "mat" is a likely next word, due to common usage and grammatical structure.
+
+---
