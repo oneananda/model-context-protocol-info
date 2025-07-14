@@ -106,3 +106,12 @@ A likely prediction: **"mat"**
 * The context "The cat sat on the" provides clues that "mat" is a likely next word, due to common usage and grammatical structure.
 
 ---
+
+### **Real-World Analogy**:
+
+When someone says:
+"Can you pass me the **salt and...**"
+Your brain predicts **pepper** based on context and prior knowledge — this is context modeling in action.
+
+---
+
