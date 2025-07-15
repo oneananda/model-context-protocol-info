@@ -115,3 +115,33 @@ Your brain predicts **pepper** based on context and prior knowledge — this is 
 
 ---
 
+### Code Example: Predict Next Word Using GPT-2
+
+````python
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+import torch
+
+# Load pre-trained GPT-2 model and tokenizer
+model_name = "gpt2"
+tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+model = GPT2LMHeadModel.from_pretrained(model_name)
+
+# Set model to evaluation mode
+model.eval()
+
+# Input context
+context = "The cat sat on the"
+
+# Encode input text
+input_ids = tokenizer.encode(context, return_tensors='pt')
+
+# Generate next token
+with torch.no_grad():
+    outputs = model(input_ids)
+    next_token_logits = outputs.logits[:, -1, :]
+    next_token_id = torch.argmax(next_token_logits, dim=-1).item()
+    predicted_word = tokenizer.decode([next_token_id])
+
+print(f"Input: {context}")
+print(f"Predicted next word: {predicted_word}")
+````
