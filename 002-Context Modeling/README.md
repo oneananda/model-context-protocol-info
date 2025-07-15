@@ -158,3 +158,12 @@ Predicted next word: mat
 
 **(Note: Output may vary depending on the model and version.)**
 
+### Explaination - What’s Happening?
+
+GPT2Tokenizer tokenizes the input context.
+
+GPT2LMHeadModel uses the context to predict the most likely next token.
+
+The result demonstrates how the model uses contextual understanding to make predictions.
+
+---
