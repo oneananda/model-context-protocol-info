@@ -145,3 +145,16 @@ with torch.no_grad():
 print(f"Input: {context}")
 print(f"Predicted next word: {predicted_word}")
 ````
+
+### **Output**:
+
+When you run the code, it will output something like:
+
+````
+Input: The cat sat on the
+
+Predicted next word: mat
+````
+
+**(Note: Output may vary depending on the model and version.)**
+
