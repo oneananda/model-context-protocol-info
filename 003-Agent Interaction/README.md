@@ -50,3 +50,23 @@ This enables:
 * Role-based flow (e.g., user vs system)
 
 ---
+
+### 🔹 Role of `system` / `user` / `assistant` Messages
+
+| Role        | Purpose                                                                 |
+| ----------- | ----------------------------------------------------------------------- |
+| `system`    | Sets behavior: instructions, tone, tools, constraints                   |
+| `user`      | Provides prompts, tasks, or questions                                   |
+| `assistant` | Model’s response to `user` based on `system` guidance and prior context |
+
+**Example:**
+
+```json
+[
+  { "role": "system", "content": "You are a helpful coding assistant." },
+  { "role": "user", "content": "How do I write a loop in Python?" },
+  { "role": "assistant", "content": "You can use a for loop like this:\nfor i in range(5): print(i)" }
+]
+```
+
+---
