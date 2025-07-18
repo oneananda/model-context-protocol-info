@@ -70,3 +70,29 @@ This enables:
 ```
 
 ---
+
+### 🔹 Examples of Structured Turn Messages
+
+Here’s a structured **turn message** with full context:
+
+```json
+{
+  "session_id": "abc123",
+  "turn_id": "turn-001",
+  "messages": [
+    { "role": "system", "content": "You are an agent that explains medical terms simply." },
+    { "role": "user", "content": "What is hypertension?" }
+  ],
+  "context": {
+    "user_profile": { "name": "John", "age": 45 },
+    "language": "English",
+    "memory": { "prior_questions": ["What is diabetes?"] }
+  },
+  "response": {
+    "role": "assistant",
+    "content": "Hypertension is high blood pressure. It means the force of blood pushing against your arteries is too high."
+  }
+}
+```
+
+---
